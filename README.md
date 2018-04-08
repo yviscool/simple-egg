@@ -5,14 +5,6 @@ egg 的一个简单实现
 
 linux npm 
 
-### start
-
-```shell
-git clone ..
-cd egg-example
-npm i 
-npm run dev
-```
 
 目录如下
 
@@ -39,6 +31,21 @@ npm run dev
    └── package.json
 
 ```
+### start
+
+```shell
+git clone ..
+cd egg-example
+```
+然后把 node_modules/egg/package.json 剪切出来，不然 npm i 会把 egg 目录删除了，不知道为什么。。。
+```shell
+npm i 
+```
+把 package.json 放回去
+执行
+```shell
+npm run dev
+```
 
 核心目录就在 node_modules 下面的 .bin 隐藏目录和 egg目录。
 
@@ -47,8 +54,6 @@ npm run dev
 
 
 ### 执行流程
-
-程序入口
 
 ```javascript
 // egg-example/package.json
